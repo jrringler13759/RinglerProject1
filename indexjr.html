@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="shortcut icon" href="worldwide.png" type="image/x-icon"/>
+    <link rel = "stylesheet" href= "style.css">
+    <title> Info Internaionale</title>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">🌎 Info Internaionale</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><h5 id = "dateTime"></h5></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class = "container">
+   
+    <header class = "header">   
+            <h3 id = "capital" class = "center-align"></h3>
+    </header> 
+
+    <section id = "searchSection">
+      <form>
+        <div class="input-field inline">
+          <button class="btn waves-effect waves-light" id = "search" type="submit" name="action">Search
+          </button>
+        </div>
+        <div class="input-field inline col m">
+          <input id="countryInput" type="text" class="validate" placeholder = "Search a country">
+        </div>
+      </form>
+      <span id = "errorMadeArea">Please check the spelling of the country.</span>
+    </section>        
+
+    <section class="row">
+
+      <section class="col s12 m12" >
+        <section class = "card" id = "pictures">
+              <div class = "carousel">
+                  <a class="carousel-item" href="#one!"><img id = "pic-1"></a>
+                  <a class="carousel-item" href="#two!"><img id = "pic-2"></a>
+                  <a class="carousel-item" href="#three!"><img id = "pic-3"></a>
+                  <a class="carousel-item" href="#four!"><img id = "pic-4"></a>
+                  <a class="carousel-item" href="#five!"><img id = "pic-5"></a>
+                  <a class="carousel-item" href="#six!"><img id = "pic-6"></a>
+                  <a class="carousel-item" href="#seven!"><img id = "pic-7"></a>
+                  <a class="carousel-item" href="#eight!"><img id = "pic-8"></a>
+                  <a class="carousel-item" href="#nine!"><img id = "pic-9"></a>
+                  <a class="carousel-item" href="#ten!"><img id = "pic-10"></a>
+                  <a class="carousel-item" href="#eleven!"><img id = "pic-11"></a>
+              </div>
+          </section>
+      </section>
+    </section>
+
+    <section class = "card center-align" id = "weatherTime">
+      <h3 class="row">Currently in the Capital</h3>
+      
+      <section class = "row">
+        <div class="card-content col s12 m4 center-align" id = "weatherCard">
+            <h4>Current Weather in Capital City:</h4>
+            <h5><span id = "date"></span></h5><img id="mainIcon" src="">
+            <p class = "card-text"><h5>Temp: </h3><span class = "timeFonts" id = "temp"></span>&deg;F</p>
+        </div>
+
+        <div class = "card-content col s12 m4">
+          <h4>Weather Forecast: </h4>
+          <button id = "forecastBtn" data-target="modal1" class="btn modal-trigger">3-Day Forecast</button>
+         
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h4>Forecast</h4>
+              <div class = "card center-align">
+                <div class = "card-content">
+                  <h4 id = "date-1"></h4>
+                  <img id = "icon-1"></img>
+                  <h5>Temp:<span id = "temp-1"></span>&deg;F </h5>
+                </div>
+              </div>
+              <div class = "card">
+                <div class = "card-content">
+                  <h4 id = "date-2"></h4>
+                  <img id = "icon-2"></img>
+                  <h5>Temp:<span id = "temp-2"></span>&deg;F </h5>
+                </div>
+              </div>
+              <div class = "card">
+                <div class = "card-content">
+                  <h4 id = "date-3"></h4>
+                  <img id = "icon-3"></img>
+                  <h5>Temp:<span id = "temp-3"></span>&deg;F </h5>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+          </div>
+        </div>
+      
+        <section class="col s12 m4 card-content" id = "timeCard">
+            <h4>Current Time in Capital: </h4><span class = "timeFonts" id = "capitalTime"> </span>
+            <h5>Time Difference: </h5><span class = "timeFonts" id = "timeDif"> </span>          </div>
+        </section>
+  
+    </section>
+  </main>
+
+  <footer class="page-footer black">
+    <div class="footer-copyright">
+      <div class="container" style="margin-left: 20px">
+      © 2014 Copyright Text | Favicon by Icons8
+      <a id="wiki-link" class="grey-text text-lighten-4 right" href="#" target="_blank"></a>
+      </div>
+    </div>
+  </footer>
+        
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src = "script.js" type = "text/javascript"></script>
+    
+</body>
+</html>

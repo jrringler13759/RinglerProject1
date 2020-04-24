@@ -1,0 +1,91 @@
+body {
+    background-color: rgba(110, 144, 189, 0.788);
+    background-image: linear-gradient(rgba(109, 109, 109, 0.5), rgba(78, 78, 78, 0.5)), url("map.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 100%;
+}
+.nav-wrapper {
+    background-color: rgba(86, 150, 111, 0.753);
+}
+
+::placeholder {
+    color: black;
+}
+.brand-logo {
+    margin-left: 10px;
+}
+
+#dateTime {
+    margin-right: 10px;
+}
+
+.carousel .carousel-item>img {
+    width: 290%;    
+    margin-left: -110%; 
+    margin-top: -50%
+
+}
+
+.card {
+    border-radius: 8px;
+    background-color: rgba(202, 206, 178, 0.578); 
+    margin: 15px;  
+    padding-top: 10px;
+    
+}
+
+#pictures {
+    padding: 20px;
+}
+
+.card-content {
+    padding: 5px 15px 15px 15px !important;
+}
+#weatherTime {
+    margin-bottom: 50px;
+}
+
+h1, h3, h4, h5 {
+    font-weight: bolder;
+}
+
+.timeFonts {
+    font-size: 28px;
+    
+}
+
+.btn {
+    background-color: rgba(167, 100, 167, 0.801);
+    
+}
+.btn:hover {
+    background-color: rgba(86, 150, 111, 0.753);
+    border-color: rgba(86, 150, 111, 0.753);
+}
+
+.modal {
+    border-radius: 10px;
+    background-color: rgba(167, 100, 167, 0.801);
+    color: white;
+    width: 300px; 
+}
+
+.page-footer {
+    color: white;
+}
+
+
+#forecastBtn {
+    width: 250px;
+    height: 50px;
+    font-size: 18px;
+    
+}
+
+
+
