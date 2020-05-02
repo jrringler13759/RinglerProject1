@@ -15,7 +15,14 @@ body {
 
 ::placeholder {
     color: black;
+    font-weight: bold;
 }
+
+#countryInput[type="text"] {
+    font-size: 24px;
+    font-weight: bold; 
+}
+
 .brand-logo {
     margin-left: 10px;
 }
@@ -28,7 +35,6 @@ body {
     width: 290%;    
     margin-left: -110%; 
     margin-top: -50%
-
 }
 
 .card {
@@ -36,7 +42,6 @@ body {
     background-color: rgba(202, 206, 178, 0.578); 
     margin: 15px;  
     padding-top: 10px;
-    
 }
 
 #pictures {
@@ -57,6 +62,12 @@ h1, h3, h4, h5 {
 .timeFonts {
     font-size: 28px;
     
+}
+
+#forecastBtn {
+    width: 250px;
+    height: 50px;
+    font-size: 18px;   
 }
 
 .btn {
@@ -80,12 +91,9 @@ h1, h3, h4, h5 {
 }
 
 
-#forecastBtn {
-    width: 250px;
-    height: 50px;
-    font-size: 18px;
-    
+
+
+#wiki-link {
+    text-decoration: underline;
 }
-
-
 
