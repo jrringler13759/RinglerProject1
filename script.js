@@ -1,16 +1,10 @@
 
-
- 
-//When the page loads the screen should be clear of any "errors"
-$(window).on( "load", function() {
- 
-});
-
 //get the capital of the country the user types in
 $("#search").on("click", function(event){
   event.preventDefault();
   var country = $("#countryInput").val().trim().toLowerCase();
   if (country) {
+
         $("#countryInput").val("");
     } 
     getCountryInfo(country);
@@ -35,6 +29,9 @@ $.ajax(settings).done(function (response) {
     if (country === countryMatch){
       var capital = response[i].capital;
       $("#capital").text(capital + ", " + response[i].name);
+      if (capital === "rome"){
+        capital = capital + ",it"
+    }
 
       getPictures(capital);
       getWeather(capital);
@@ -61,23 +58,22 @@ function getPictures(capital){
 
 //shows pictures in a carousel
 function showPictures(picList){
-
-  var count = 1;
+  $(".carousel").empty();
   for (var i = 0; i < 20; i++){
     var picWidth = picList[i].width;
     var picHeight = picList[i].height;
     if(picWidth > picHeight){
       var picURL = picList[i].urls.regular;
-      $("#pic-" + count).attr("src", picURL );
-      //$("#pic-" + count).addClass("sizeIt");
-      count++;
+      var newImage = $("<a class = 'carousel-item'>").append($("<img>").attr("src", picURL));
+      $(".carousel").append(newImage);
     }
   }
+  $('.carousel').carousel();
 }
 
 //openweathermap API to get current weather for capital city
 function getWeather(capital) { 
-  $("#errorMadeArea").hide();   
+   
   var currentQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + capital + "&APPID=62fca606199df2afea0a32e25faffdc5";
 
   $.ajax({
@@ -86,16 +82,14 @@ function getWeather(capital) {
   }).then(function(response){
     var timeZone = (response.timezone)/60/60;
       showWeather(response);
-      console.log(response);
       showTimes(timeZone);
-      
-      
   });
 }
-$("#errorMadeArea").hide();   
+  
 
 //show current weather in capital
 function showWeather(response){
+  $("#icon-div").removeClass("hide");
   $("#capitalCity").text(response.name)
   var icon = response.weather[0].icon;
   var iconURL = "https://openweathermap.org/img/w/" + icon + ".png";
@@ -116,20 +110,19 @@ function getForecast(capital){
 //show 3 day forecast in a modal
 function showForecast(forecastResponse){
   var list = forecastResponse.list;
-  var count = 1;   
-  for (var i = 0; i < list.length; i++){
- 
-    if (list[i].dt_txt.includes("15:00:00")) {
+  var count = 1;
+  var x = 7
+  for (var i = 0; i < 3; i++){
         
-        $("#date-"+ count).text(new Date(list[i].dt_txt).toLocaleDateString());
+        $("#date-"+ count).text(new Date(list[x].dt_txt).toLocaleDateString());
         
-        var iconURL = "https://openweathermap.org/img/w/" + list[i].weather[0].icon + ".png";
+        var iconURL = "https://openweathermap.org/img/w/" + list[x].weather[0].icon + ".png";
         $("#icon-"+ count).attr("src", iconURL);
 
-        $("#temp-"+ count).text(((list[i].main.temp- 273.15) * 1.80 +32).toFixed(0));
+        $("#temp-"+ count).text(((list[x].main.temp- 273.15) * 1.80 +32).toFixed(0));
         
         count++; 
-    }
+    	var x = x + 8
   }
 }
 
@@ -147,8 +140,7 @@ function showTimes(timeZone){
         $("#timeDif").text((Math.abs(timeDif)) + " hours ahead");
     } 
   var capitalTime = moment().utcOffset(timeZone).format('h:mm A ' + ' / ' + 'MMMM Do');
-  var weatherDate = moment().utcOffset(timeZone).format('MMMM Do');
-  $("#date").text(weatherDate);
+ 
   $("#capitalTime").text(capitalTime);
 
 }
@@ -165,5 +157,5 @@ function wikiLink (capital){
   $("#wiki-link").attr("href", wikiURL);
 }
 
-$('.carousel').carousel();
+
 $('#modal1').modal();
