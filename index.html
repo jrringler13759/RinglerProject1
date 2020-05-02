@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="shortcut icon" href="worldwide.png" type="image/x-icon"/>
     <link rel = "stylesheet" href= "style.css">
-    <title> Info Internaionale</title>
+    <title> Info Internacional</title>
 </head>
 <body>
 
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">🌎 Info Internaionale</a>
+      <a href="#" class="brand-logo left">🌎 Info Internacional</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><h5 id = "dateTime"></h5></li>
       </ul>
@@ -36,7 +36,6 @@
           <input id="countryInput" type="text" class="validate" placeholder = "Search a country">
         </div>
       </form>
-      <span id = "errorMadeArea">Please check the spelling of the country.</span>
     </section>        
 
     <section class="row">
@@ -44,17 +43,6 @@
       <section class="col s12 m12" >
         <section class = "card" id = "pictures">
               <div class = "carousel">
-                  <a class="carousel-item" href="#one!"><img id = "pic-1"></a>
-                  <a class="carousel-item" href="#two!"><img id = "pic-2"></a>
-                  <a class="carousel-item" href="#three!"><img id = "pic-3"></a>
-                  <a class="carousel-item" href="#four!"><img id = "pic-4"></a>
-                  <a class="carousel-item" href="#five!"><img id = "pic-5"></a>
-                  <a class="carousel-item" href="#six!"><img id = "pic-6"></a>
-                  <a class="carousel-item" href="#seven!"><img id = "pic-7"></a>
-                  <a class="carousel-item" href="#eight!"><img id = "pic-8"></a>
-                  <a class="carousel-item" href="#nine!"><img id = "pic-9"></a>
-                  <a class="carousel-item" href="#ten!"><img id = "pic-10"></a>
-                  <a class="carousel-item" href="#eleven!"><img id = "pic-11"></a>
               </div>
           </section>
       </section>
@@ -65,9 +53,11 @@
       
       <section class = "row">
         <div class="card-content col s12 m4 center-align" id = "weatherCard">
-            <h4>Current Weather in Capital City:</h4>
-            <h5><span id = "date"></span></h5><img id="mainIcon" src="">
-            <p class = "card-text"><h5>Temp: </h3><span class = "timeFonts" id = "temp"></span>&deg;F</p>
+          <h4>Current Weather:</h4>
+          <div id="icon-div" class="hide">
+            <img id="mainIcon" src="">
+          </div>
+          <p class = "card-text"><h5>Temp: </h3><span class = "timeFonts" id = "temp"></span>&deg;F</p>
         </div>
 
         <div class = "card-content col s12 m4">
@@ -106,8 +96,8 @@
         </div>
       
         <section class="col s12 m4 card-content" id = "timeCard">
-            <h4>Current Time in Capital: </h4><span class = "timeFonts" id = "capitalTime"> </span>
-            <h5>Time Difference: </h5><span class = "timeFonts" id = "timeDif"> </span>          </div>
+            <h4>Current Time: </h4><span class = "timeFonts" id = "capitalTime"> </span>
+            <h5>Time Difference: </h5><span class = "timeFonts" id = "timeDif"> </span>         
         </section>
   
     </section>
@@ -115,8 +105,11 @@
 
   <footer class="page-footer black">
     <div class="footer-copyright">
-      <div class="container" style="margin-left: 20px">
-      © 2014 Copyright Text | Favicon by Icons8
+      <div class = "left" style="margin-left: 20px">
+      © 2020 Created By: CSJR  |  Favicon by Icons8
+      </div>
+
+      <div class = "right" style="margin-right: 20px">
       <a id="wiki-link" class="grey-text text-lighten-4 right" href="#" target="_blank"></a>
       </div>
     </div>
@@ -134,3 +127,6 @@
     
 </body>
 </html>
+
+
+
